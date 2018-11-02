@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactDemo.TokenHelper", "Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactDemo.Repositories", "ReactDemo.Repositories\ReactDemo.Repositories.csproj", "{D4B02FD8-D358-471F-96C1-52897A638669}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactDemo.Web", "ReactDemo.Web\ReactDemo.Web.csproj", "{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D4B02FD8-D358-471F-96C1-52897A638669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B02FD8-D358-471F-96C1-52897A638669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B02FD8-D358-471F-96C1-52897A638669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
