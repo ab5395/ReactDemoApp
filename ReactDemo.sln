@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactDemo.Data", "ReactDemo.Data\ReactDemo.Data.csproj", "{B4B16EAB-36C6-43CB-A2DB-9C3F93FC21ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactDemo.Data", "ReactDemo.Data\ReactDemo.Data.csproj", "{B4B16EAB-36C6-43CB-A2DB-9C3F93FC21ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactDemo.TokenHelper", "ReactDemo.TokenHelper\ReactDemo.TokenHelper.csproj", "{4A7676D0-D1DD-41D3-B6B0-93063BD5D97D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactDemo.TokenHelper", "ReactDemo.TokenHelper\ReactDemo.TokenHelper.csproj", "{4A7676D0-D1DD-41D3-B6B0-93063BD5D97D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactDemo.Repositories", "ReactDemo.Repositories\ReactDemo.Repositories.csproj", "{D4B02FD8-D358-471F-96C1-52897A638669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactDemo.Repositories", "ReactDemo.Repositories\ReactDemo.Repositories.csproj", "{D4B02FD8-D358-471F-96C1-52897A638669}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactDemo.Web", "ReactDemo.Web\ReactDemo.Web.csproj", "{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactDemo.Web", "ReactDemo.Web\ReactDemo.Web.csproj", "{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactDemoWebApp", "ReactDemoWebApp\ReactDemoWebApp.csproj", "{DDE2D6F1-3AA2-4B6C-A7AE-AA39FD93C56A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9685FBD3-F1DF-4D68-B4C9-2C448CCF66C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE2D6F1-3AA2-4B6C-A7AE-AA39FD93C56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE2D6F1-3AA2-4B6C-A7AE-AA39FD93C56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE2D6F1-3AA2-4B6C-A7AE-AA39FD93C56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE2D6F1-3AA2-4B6C-A7AE-AA39FD93C56A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
