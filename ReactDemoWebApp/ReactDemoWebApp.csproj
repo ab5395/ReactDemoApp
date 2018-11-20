@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ReactDemo.Data\ReactDemo.Data.csproj" />
     <ProjectReference Include="..\ReactDemo.Repositories\ReactDemo.Repositories.csproj" />
     <ProjectReference Include="..\ReactDemo.TokenHelper\ReactDemo.TokenHelper.csproj" />
   </ItemGroup>
