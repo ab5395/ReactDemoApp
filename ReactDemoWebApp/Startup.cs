@@ -53,11 +53,14 @@ namespace ReactDemoWebApp
                 // User settings
                 options.User.RequireUniqueEmail = true;
             });
-            // In production, the React files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/build";
-            });
+            #region Devlopment Time Code
+            //// In production, the React files will be served from this directory
+            ///use This Line If project run on production mode not at publish time
+            //services.AddSpaStaticFiles(configuration =>
+            //{
+            //    configuration.RootPath = "ClientApp/build";
+            //}); 
+            #endregion
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
@@ -65,36 +68,74 @@ namespace ReactDemoWebApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
+            #region Devlopment Time
+            //For Development 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/error");
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
+                    template: "{controller}/{action=index}/{id?}");
             });
-
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "ClientApp";
-
+                spa.Options.SourcePath = "clientapp";
                 if (env.IsDevelopment())
                 {
+                    //Use Only one line not both at a time
+                    //For development second line is better for dev environment
+
+                    //This Line Use first time is npm not install
                     spa.UseReactDevelopmentServer(npmScript: "start");
+
+                    //This line works when react start react project run inpendent 
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
                 }
-            });
+            }); 
+            #endregion
+
+
+
+            #region Publish Time 
+            //For Publish 
+            //Please use only this code at publish time 
+            //var options = new DefaultFilesOptions();
+            //options.DefaultFileNames.Clear();
+            //options.DefaultFileNames.Add("index.html");
+
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
+
+            //// ===== Use Authentication ======
+            //app.UseAuthentication();
+            //app.UseMvc()
+            //    .UseDefaultFiles(options)
+            //.Use(async (context, next) =>
+            //{
+            //    await next();
+
+            //    if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value))
+            //    {
+            //        context.Request.Path = "/index.html";
+            //        await next();
+            //    }
+            //})
+            //.UseStaticFiles(); 
+            #endregion
         }
     }
 }

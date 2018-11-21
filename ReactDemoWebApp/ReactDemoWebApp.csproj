@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
@@ -18,6 +14,10 @@
     <ProjectReference Include="..\ReactDemo.Data\ReactDemo.Data.csproj" />
     <ProjectReference Include="..\ReactDemo.Repositories\ReactDemo.Repositories.csproj" />
     <ProjectReference Include="..\ReactDemo.TokenHelper\ReactDemo.TokenHelper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>
