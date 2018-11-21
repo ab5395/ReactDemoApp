@@ -74,7 +74,8 @@ namespace ReactDemoWebApp
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+
+            app.UseStaticFiles();
         }
     }
 }
