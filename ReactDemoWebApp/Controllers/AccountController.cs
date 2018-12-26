@@ -41,38 +41,7 @@ namespace ReactDemoWebApp.Controllers
         {
             try
             {
-                #region Helper
-                //const string _adminRoleName = "Admin";
-                //string _adminEmail = "abh@narola.email";
-                //string _adminPassword = "Abh@123456";
-
-                //string[] _defaultRoles = new string[] { _adminRoleName, "Customer" };
-
-                //foreach (var role in _defaultRoles)
-                //{
-                //    if (!await _roleManager.RoleExistsAsync(role))
-                //    {
-                //        await _roleManager.CreateAsync(new IdentityRole(role));
-                //    }
-                //}
-
-                //var adminUsers = await _userManager.GetUsersInRoleAsync(_adminRoleName);
-
-                //if (!adminUsers.Any())
-                //{
-                //    var adminUser = new User()
-                //    {
-                //        Email = _adminEmail,
-                //        UserName = _adminEmail,
-                //        FirstName = "Abh",
-                //        LastName = "Narola",
-                //    };
-
-                //    var result = await _userManager.CreateAsync(adminUser, _adminPassword);
-                //    await _userManager.AddToRoleAsync(adminUser, _adminRoleName);
-                //} 
-                #endregion
-
+                
                 if (!ModelState.IsValid)
                     return _jsonResponse.GenerateJsonResult(false, "Invalid Model");
 
@@ -93,13 +62,7 @@ namespace ReactDemoWebApp.Controllers
                     return _jsonResponse.GenerateJsonResult(false, "Please Confirm Your Email!!!");
                 }
 
-                //if (!user.IsActive || user.IsDeleted)
-                //{
-                //    return _jsonResponse.GenerateJsonResult(false, AccountMessage.AccountClosed);
-                //}
-
-
-                var currHttpScheme = _httpContext.HttpContext.Request.Scheme;
+                                var currHttpScheme = _httpContext.HttpContext.Request.Scheme;
                 var currHost = _httpContext.HttpContext.Request.Host.Value;
                 var currHostUrl = currHttpScheme + "://" + currHost;
 
