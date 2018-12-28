@@ -5,7 +5,7 @@ const Login = props => (
     <div>
         <h1>Login Page.</h1>
         <p>
-            <Link to={'/Home'}>Login</Link>
+            <Link to={'/Home'}>Home</Link>
         </p>
     </div>
 )

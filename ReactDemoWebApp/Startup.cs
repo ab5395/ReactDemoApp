@@ -54,12 +54,12 @@ namespace ReactDemoWebApp
                 options.User.RequireUniqueEmail = true;
             });
             #region Devlopment Time Code
-            //// In production, the React files will be served from this directory
-            ///use This Line If project run on production mode not at publish time
-            //services.AddSpaStaticFiles(configuration =>
-            //{
-            //    configuration.RootPath = "ClientApp/build";
-            //}); 
+            // In production, the React files will be served from this directory
+            //use This Line If project run on production mode not at publish time
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/build";
+            });
             #endregion
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
